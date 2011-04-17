@@ -9,8 +9,10 @@ public class ThePathToEnlightenment {
 
 	private static TestSuite koans() {
 		TestSuite suite = new TestSuite(this.class.name);
-		[  	AboutAsserts.class
-			
+        [       
+//		[  	    AboutAsserts.class
+//            ,   AboutTruth.class
+                AboutClasses.class
 		].each { koan -> suite.addTestSuite(koan) }
 		return suite;
 	}
