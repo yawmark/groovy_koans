@@ -9,14 +9,8 @@ public class ThePathToEnlightenment {
 
 	private static TestSuite koans() {
 		TestSuite suite = new TestSuite(this.class.name);
-		[  	
-			AboutTruth.class
-//						AboutAsserts.class
-			//			,	StringKoans.class
-			//			,	DateKoans.class
-			//			,	RangesKoans.class
-			//			,	CollectionsKoans.class
-			//			,	OperatorOverloadingKoans.class
+		[  	AboutAsserts.class
+			
 		].each { koan -> suite.addTestSuite(koan) }
 		return suite;
 	}

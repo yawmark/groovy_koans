@@ -10,7 +10,7 @@ class Guru {
 	void seekAdviceOn(TestSuite koans) {
 		introduce()
 		def analysis = assess(koans)
-		acknowledgeMostRecent(analysis.successes)
+		acknowledgeMostRecent(analysis.success)
 		if (analysis.failure) {
 			report(analysis.failure)
 			encourage()
@@ -21,18 +21,18 @@ class Guru {
 		describeProgress(analysis)
 	}
 	
-	private acknowledgeMostRecent(successes) {
-		if (successes.mostRecent) {
-			println "\t${successes.mostRecent} has expanded your awareness."
+	private acknowledgeMostRecent(success) {
+		if (success.mostRecent) {
+			println "\t${success.mostRecent} has expanded your awareness."
 		}
 	}
 
 	private GuruAnalysis assess(koans) {
-		def successes = new Successes()
+		def success = new Success()
 		def junit = new JUnitCore()
-		junit.addListener(successes)
+		junit.addListener(success)
 		def result = junit.run(koans)
-		new GuruAnalysis(successes:successes, failure:result.failures[0], koansCount:koans.countTestCases())
+		new GuruAnalysis(success:success, failure:result.failures[0], koansCount:koans.countTestCases())
 	}
 
 	private introduce() {
@@ -41,7 +41,7 @@ class Guru {
 	}
 
 	private describeProgress(analysis) {
-		printf("Your path thus far... %s/%s%n", analysis.successes.count, analysis.koansCount)
+		printf("Your path thus far... %s/%s%n", analysis.success.count, analysis.koansCount)
 	}
 
 	private saySomethingPithy() {
@@ -70,7 +70,7 @@ Please meditate on the following code:
 }
 
 class GuruAnalysis {
-	Successes successes
+	Success success
 	Failure failure
 	int koansCount
 }

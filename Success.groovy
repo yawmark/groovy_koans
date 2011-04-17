@@ -3,7 +3,7 @@ import org.junit.runner.notification.Failure
 import org.junit.runner.notification.RunListener;
 
 
-class Successes extends RunListener {
+class Success extends RunListener {
 	
 	private successful = []
 	
