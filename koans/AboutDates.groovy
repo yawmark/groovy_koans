@@ -15,7 +15,7 @@ import static java.util.Calendar.*
 * - http://download.oracle.com/javase/6/docs/api/java/util/Calendar.html
 *
 */
-class DateKoans extends Koans {
+class AboutDates extends Koans {
 	// Creating Dates
 	void testParseStringToDate() {
 		def date = new Date().parse('yyyy/MM/dd', '2001/09/11')

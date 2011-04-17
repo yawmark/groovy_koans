@@ -11,7 +11,7 @@ package koans;
  * - http://groovy.codehaus.org/groovy-jdk/java/util/List.html
  * - http://groovy.codehaus.org/groovy-jdk/java/util/Set.html
  */
-class CollectionsKoans extends Koans {
+class AboutCollections extends Koans {
 	
 	void testCreateCollection() {
 		def list = []
@@ -82,7 +82,7 @@ class CollectionsKoans extends Koans {
 		assert [__] == list
 	}
 		
-	void testChaninedAppending() {
+	void testChainedAppending() {
 		def list = ['a']
 		
 		list << 'g' << 'h'

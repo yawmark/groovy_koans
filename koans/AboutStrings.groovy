@@ -10,7 +10,7 @@ package koans;
 * - http://groovy.codehaus.org/JN1525-Strings
 *
 */
-class StringKoans extends Koans {
+class AboutStrings extends Koans {
 	
 	
 	void testDoubleQuoteStringType() {

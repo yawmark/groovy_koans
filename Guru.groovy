@@ -10,6 +10,7 @@ class Guru {
 	void seekAdviceOn(TestSuite koans) {
 		introduce()
 		def analysis = assess(koans)
+		acknowledgeMostRecent(analysis.successes)
 		if (analysis.failure) {
 			report(analysis.failure)
 			encourage()
@@ -18,6 +19,12 @@ class Guru {
 		}
 		saySomethingPithy()
 		describeProgress(analysis)
+	}
+	
+	private acknowledgeMostRecent(successes) {
+		if (successes.mostRecent) {
+			println "\t${successes.mostRecent} has expanded your awareness."
+		}
 	}
 
 	private GuruAnalysis assess(koans) {
@@ -54,7 +61,7 @@ class Guru {
 \tYou have not yet reached enlightenment.
 
 The answers you seek:
-\t${f.message.trim()}
+${f.message.trim()}
 
 Please meditate on the following code:
 \t${f.trace.split(/\n/).find { it =~ f.description.methodName }?.split(' ')[1]}

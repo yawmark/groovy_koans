@@ -11,6 +11,10 @@ class Successes extends RunListener {
 		successful.size()
 	}
 	
+	Description getMostRecent() {
+		return (successful.isEmpty()) ? null : successful[-1]
+	}
+	
 	@Override void testStarted(Description description) throws Exception {
 		successful << description
 	}

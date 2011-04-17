@@ -9,7 +9,7 @@ package koans
 * - http://groovy.codehaus.org/Operator+Overloading
 * 
 */
-class OperatorOverloadingKoans extends Koans  {
+class AboutOperatorOverloading extends Koans  {
 	
 	def holder = new Holder()
 	

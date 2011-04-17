@@ -1,13 +1,21 @@
 package koans
 
+/**
+ * Groovy asserts. 
+ * 
+ * Instructions: Replace __ with the appropriate value.
+ * 
+ */
 class AboutAsserts extends Koans {
 	
+	// Consider truth using the Groovy Power Assert.
 	void testAssertTruth() {
-		assert true		// this should be true
+		assert __		// this should be true
 	}
 	
-	void testAssertWithMessage() {
-		assert false, "This should be true -- Please fix this"
+	// Sometimes appropriate messages can accelerate enlightenment.
+	void testTruthWithMessage() {
+		assert __ == true: "This should be true -- Please fix this"
 	}
 
 }

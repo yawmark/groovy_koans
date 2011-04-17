@@ -9,8 +9,9 @@ public class ThePathToEnlightenment {
 
 	private static TestSuite koans() {
 		TestSuite suite = new TestSuite(this.class.name);
-		[   //	TruthKoans.class
-			AboutAsserts.class
+		[  	
+			AboutTruth.class
+//						AboutAsserts.class
 			//			,	StringKoans.class
 			//			,	DateKoans.class
 			//			,	RangesKoans.class
@@ -23,5 +24,5 @@ public class ThePathToEnlightenment {
 	public static void main(String[] args) {
 		new Guru().seekAdviceOn(koans())
 	}
-	
+
 }

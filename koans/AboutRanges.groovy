@@ -1,6 +1,6 @@
 package koans;
 
-class RangesKoans extends Koans {
+class AboutRanges extends Koans {
 	
 	void testRange() {
 		def range = 1..5
