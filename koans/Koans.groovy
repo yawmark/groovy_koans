@@ -8,7 +8,6 @@ class Koans extends GroovyTestCase {
 	
 	@Override void run(final TestResult result) {
 		super.run(result)
-		
 		if (hasFailuresOrErrors(result)) result.stop()
 	}
 	

@@ -3,7 +3,7 @@ package koans
 class AboutAsserts extends Koans {
 	
 	void testAssertTruth() {
-		assert false		// this should be true
+		assert true		// this should be true
 	}
 	
 	void testAssertWithMessage() {
